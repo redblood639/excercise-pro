@@ -239,6 +239,6 @@ Route::delete('cruds/{id}','App\Http\Controllers\ApiController@deleteCRUD');
 
 `POST http://127.0.0.1:8000/api/cruds/create`
 
-`endpoint PUT http://127.0.0.1:8000/api/cruds/[id]`
+`PUT http://127.0.0.1:8000/api/cruds/[id]`
 
-`endpoint DELETE http://127.0.0.1:8000/api/cruds/id`
+`DELETE http://127.0.0.1:8000/api/cruds/id`
