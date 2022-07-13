@@ -39,3 +39,14 @@ DB_USERNAME=root
 DB_PASSWORD=
 ```
 
+then
+
+`php artisan migrate`
+
+## Step 3
+
+`php artisan make:controller ApiController`
+
+
+
+
