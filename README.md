@@ -123,7 +123,7 @@ class ApiController extends Controller
     {
         $cruds = Crud::get()->toJson(JSON_PRETTY_PRINT);
         return response($cruds, 200);
-        //endpoint GET http://127.0.0.1:8000/api/cruds';
+        //endpoint GET http://127.0.0.1:8000/api/cruds;
         
     }
 
@@ -149,7 +149,7 @@ class ApiController extends Controller
             $cruds = Crud::where('id', $id)->get()
                 ->toJson(JSON_PRETTY_PRINT);
             return response($cruds, 200);
-            //endpoint GET http://127.0.0.1:8000/api/cruds/[id]';
+            //endpoint GET http://127.0.0.1:8000/api/cruds/[id];
             
         }
         else
@@ -231,3 +231,14 @@ Route::post('cruds/create', 'App\Http\Controllers\ApiController@createCRUD');
 Route::put('cruds/{id}', 'App\Http\Controllers\ApiController@updateCRUD');
 Route::delete('cruds/{id}','App\Http\Controllers\ApiController@deleteCRUD');
 ```
+
+## Endpoints
+`GET http://127.0.0.1:8000/api/cruds`
+
+`GET http://127.0.0.1:8000/api/cruds/[id]`
+
+`POST http://127.0.0.1:8000/api/cruds/create`
+
+`endpoint PUT http://127.0.0.1:8000/api/cruds/[id]`
+
+`endpoint DELETE http://127.0.0.1:8000/api/cruds/id`
