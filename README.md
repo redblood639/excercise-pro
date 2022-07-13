@@ -41,6 +41,66 @@ DB_PASSWORD=
 
 then
 
+`php artisan make:model Crud -m`
+
+then `Crud.php`
+
+```
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Crud extends Model
+{
+    protected $table = 'cruds';
+
+    protected $fillable = ['crud1', 'crud2'];
+}
+
+```
+
+then `create_cruds_table.php`
+
+```
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('cruds', function (Blueprint $table) {
+            $table->id();
+            $table->string('crud1');
+            $table->string('crud2');
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('cruds');
+    }
+};
+```
+then
+
 `php artisan migrate`
 
 ## Step 3
