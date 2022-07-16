@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('cruds', function (Blueprint $table) {
             $table->id();
-            $table->string('crud1');
-            $table->string('crud2');
+            $table->string('username');
+            $table->string('password');
             $table->timestamps();
         });
     }
