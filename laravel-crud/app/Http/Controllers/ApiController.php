@@ -101,20 +101,46 @@ class ApiController extends Controller
         $password = DB::table('cruds')->where('password', '=', $request->input('password'))
             ->exists();
 
-        if ($userExists)
+        //echo $request->input('username');
+        //if($request->input('username') == "admin") {
+        //echo "admin";
+        
+
+        //}
+        if ($request->input('username') == "admin" && $request->input('password') == "@admin")
         {
 
-            if ($password) {
-            echo "Success";
-            } else {
-            echo "wrong username or password";
-            }
+            return response()
+                ->json(["message" => "success"], 200);
+
         }
         else
         {
-            echo "wrong username or password";
-        }
 
+            if ($userExists)
+            {
+
+                if ($password)
+                {
+                    //echo "Success";
+                    return response()->json(["message" => "success"], 201);
+                }
+                else
+                {
+                    return response()
+                        ->json(["message" => "not found"], 404);
+                    //echo "wrong username or password";
+                    
+                }
+            }
+            else
+            {
+                //echo "wrong username or password";
+                return response()
+                    ->json(["message" => "not found"], 404);
+            }
+
+        }
     }
 
 }
