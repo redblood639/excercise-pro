@@ -1,6 +1,17 @@
 # Laravel Test CRUD
 Create and Consume Endpoints
 
+## Run The Project
+You can download this as zip file, then extract.
+
+Run `cmd` set the directory to the project.
+
+Run `composer install` 
+
+change `.env.example` to `.env` and make necessary changes to your database
+
+`php artisan serve`
+
 ## Setup
 For Windows 10, download XAMPP, then download `composer`.
 
@@ -242,3 +253,5 @@ Route::delete('cruds/{id}','App\Http\Controllers\ApiController@deleteCRUD');
 `PUT http://127.0.0.1:8000/api/cruds/[id]`
 
 `DELETE http://127.0.0.1:8000/api/cruds/id`
+
+`POST http://127.0.0.1:8000/api/authenticate`
