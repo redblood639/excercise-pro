@@ -9,5 +9,5 @@ class Crud extends Model
 {
     protected $table = 'cruds';
 
-    protected $fillable = ['crud1', 'crud2'];
+    protected $fillable = ['username', 'password'];
 }

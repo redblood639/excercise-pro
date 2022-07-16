@@ -23,3 +23,4 @@ Route::get('cruds/{id}', 'App\Http\Controllers\ApiController@getCRUD');
 Route::post('cruds/create', 'App\Http\Controllers\ApiController@createCRUD');
 Route::put('cruds/{id}', 'App\Http\Controllers\ApiController@updateCRUD');
 Route::delete('cruds/{id}','App\Http\Controllers\ApiController@deleteCRUD');
+Route::post('authenticate/','App\Http\Controllers\ApiController@authenticate');
