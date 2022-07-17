@@ -4,9 +4,9 @@ Create and Consume Endpoints
 ## Run The Project
 You can download this as a zip file, then extract.
 
-Run `cmd` set the directory to the project.
+Run `cmd` and set the directory to the project.
 
-Run `composer install` 
+Run `composer install`. 
 
 change `.env.example` to `.env` and make necessary changes to your database
 
