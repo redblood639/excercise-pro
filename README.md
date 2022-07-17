@@ -2,7 +2,7 @@
 Create and Consume Endpoints
 
 ## Run The Project
-You can download this as zip file, then extract.
+You can download this as a zip file, then extract.
 
 Run `cmd` set the directory to the project.
 
