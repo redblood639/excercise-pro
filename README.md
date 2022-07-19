@@ -91,10 +91,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('cruds', function (Blueprint $table) {
+        Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('crud1');
-            $table->string('crud2');
+            $table->name();
+            $table->password();
             $table->timestamps();
         });
     }
@@ -106,7 +106,7 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cruds');
+        Schema::dropIfExists('users');
     }
 };
 ```
