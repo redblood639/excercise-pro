@@ -1,0 +1,5 @@
+vendor
+.vscode
+debug*
+blog_example__go_web_app
+birdpedia
